@@ -19,7 +19,8 @@ jobs:
       - name: Install Build Wrapper
         uses: SonarSource/sonarqube-scan-action/install-build-wrapper@v4
         env:
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} # SonarQube URL is stored in a GitHub secret
+          #SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} # SonarQube URL is stored in a GitHub secret
+          SONAR_HOST_URL: https://sonarcloud.io
       - name: Run Build Wrapper
         run: |
           mkdir build
